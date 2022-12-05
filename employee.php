@@ -29,6 +29,7 @@ if ($id === null || $id === false) {
     if ($stmt->rowCount() === 0) {
         http_response_code(404);
         echo "404 Not Found";
+        die();
     } else {
         $e = $stmt->fetch();
         $r = $stmt2->fetch();
